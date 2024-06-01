@@ -45,7 +45,7 @@ public with sharing class EventDetailsController {
         Location__r.State__c,
         Location__r.Street__c
       FROM Event__c
-      WHERE Id = :eventId
+      WHERE Id = :eventId and Location__r.Country__c!=''
       WITH SECURITY_ENFORCED
     ];
     return eventRecord;
