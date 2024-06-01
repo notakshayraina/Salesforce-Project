@@ -25,7 +25,7 @@ public with sharing class EventDetailsController {
         Speaker__r.About_Me__c
       FROM EventSpeakers__c
       WHERE Event__c = :eventId
-      WITH SECURITY_ENFORCED
+      
     ];
     return speakerList;
   }
